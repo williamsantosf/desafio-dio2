@@ -4,7 +4,10 @@ function calculaRankin(win, loose){
         let vitorias = win - loose;
 
         switch (true) {
-            case vitorias < 10:
+            case vitorias < 0:
+            console.log("O herói não possui vitórias e está no nível Ferro");
+            break;         
+            case vitorias >= 1 && vitorias <= 10:
             console.log("O Herói tem saldo de vitórias de " + vitorias + " e está no nível Ferro");
             break;
             case vitorias >= 11 && vitorias <= 20:
